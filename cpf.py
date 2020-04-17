@@ -165,4 +165,3 @@ while True:
         criar_arq()
     else:
         print('Comando não reconhecido, retornando ao menu')
-input("Não era para voce estar lendo isso.")
