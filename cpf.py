@@ -1,6 +1,4 @@
-import pyperclip
-import random
-
+import pyperclip, random
 
 def digitos_ver(numero):
     soma = 0
@@ -115,7 +113,7 @@ def criar_arq():
 
 def menu():
     print("\n Olá! Bem vindo!")
-    print(" Opções: \n1- Verificar CPF\n2- Verificar CPFs de um arquivo TXT\n3- Gerar 1 CPF\n4- Gerar arquivo TXT com CPFs\n\n")
+    print(" Opções: \n1- Verificar CPF\n2- Verificar CPFs de um arquivo TXT\n3- Gerar 1 CPF\n4- Gerar arquivo TXT com CPFs\nexit- Fechar programa\n\n\n")
     return input("Digite o número da opção desejada: ")
 
 
@@ -151,7 +149,7 @@ invalidos = [
 while True:
     opcao = menu()
     if opcao == '1':
-        print("\n Verificador de CPF! Informe o número com ou sem pontos/traços\n ou digite 0 para retornar ao menu:")
+        print("\n Verificador de CPF! Informe o número com ou sem pontos/traços\nou digite 0 para retornar ao menu")
         while True:
             numero = input()
             if numero == '0':
@@ -163,5 +161,7 @@ while True:
         gerar_cpf()
     elif opcao == '4':
         criar_arq()
+    elif opcao == 'exit':
+        quit()
     else:
         print('Comando não reconhecido, retornando ao menu')
